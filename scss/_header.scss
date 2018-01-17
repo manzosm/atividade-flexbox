@@ -1,0 +1,130 @@
+.topo {
+    background: #002B49;
+
+}
+
+.container_flex_header {
+    @include container;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: #002B49;
+
+}
+
+
+.nav {
+    align-self: flex-end;
+
+    ul {
+
+        li {
+
+            display: inline-block;
+            padding: 10px;
+            margin: 0 20px 0 10px;
+
+            a {
+                text-decoration: none;
+                font-family: 'Exo 2', sans-serif;
+                font-size: 1rem;
+                background: -webkit-linear-gradient(#3E6EA1, #fff, #3E6EA1);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+
+                &::after {
+                    content: '';
+                    display: block;
+                    background: rgb(255, 255, 255);
+                    height: 2px;
+                    width: 0;
+                    transition: .5s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+
+            }
+
+        }
+    }
+}
+
+
+.logo {
+    align-self: center;
+    padding: 10px 0;
+    img {
+        width: 190px;
+        height: 60px;
+        margin-left: 20px;
+    }
+}
+
+
+@media (max-width:400px) {
+
+    .container_flex_header {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .nav {
+        ul {
+            li {
+
+                padding: 0;
+                margin: 0 5px 0 5px;
+                
+                a {
+                    font-size: 1rem;
+                    padding: 20px 10px;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media (min-width:401) and (max-width:455px) {
+
+    .container_flex_header {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .nav {
+        ul {
+            li {
+
+                padding: 0;
+                margin: 2px;
+                
+                a {
+                    font-size: 1rem;
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media (max-width:978px) {
+
+    .container_flex_header {
+        flex-direction: column;
+        max-width: 500px;
+
+    }
+
+   }
